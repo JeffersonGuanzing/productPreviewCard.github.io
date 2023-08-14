@@ -31,7 +31,7 @@ body {
   height: 25em;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
-  background: url("/images/image-product-mobile.jpg");
+  background: url("./images/image-product-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover; /* Make the image cover the entire div */
   background-position: center; /* Center the image within the div */
