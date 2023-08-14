@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: hsl(30, 38%, 92%);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    border-radius: 0.5em;
+    max-width: 40em;
+    margin: 4em;
+    
+    .hero-img {
+        width: auto;
+        height: 25em;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        background: url('/images/image-product-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; /* Make the image cover the entire div */
+        background-position: center; /* Center the image within the div */
+    }
+
+    .hero-section {
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        background: hsl(0, 0%, 100%);
+        margin: auto;
+        padding: 4em;
+
+        .title {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+
+            &:hover {
+                color: hsl(158, 36%, 37%);
+            }
+        }
+        .subtitle {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .description {
+            margin: 1em auto;
+        }
+
+        .price-container {
+            margin: 1em auto;
+            display: flex;
+            gap: 1em;
+            align-items: center;
+
+            .price {
+                color: hsl(158, 36%, 37%);
+                font-family: 'Fraunces', serif;
+                font-weight: 700;
+            }
+
+            .discounted-price {
+                text-decoration: line-through;
+                color: black;
+            }
+        }
+
+        .cart-icon {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            color: hsl(0, 0%, 100%);
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            width: 100%;
+            border-radius: 0.5em;
+            border: none;
+            background: hsl(158, 36%, 37%);
+            padding: 1em;
+
+            .icon {
+                margin-right: 0.5em;
+            }
+            
+            &:hover {
+                background: hsl(158, 83%, 16%);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .card {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .hero-img {
+            height: 100%;
+            width: 50%;
+            border-radius: 0;
+            border-top-left-radius: 0.5em;
+            border-bottom-left-radius: 0.5em;
+            background: url('/images/image-product-desktop.jpg');
+            background-repeat: no-repeat;
+            background-size: cover; /* Make the image cover the entire div */
+            background-position: center; /* Center the image within the div */
+        }
+
+        .hero-section {
+            width: 50%;
+            padding: 2em;
+            border-top-right-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
+        }
+        
+    }
+}
